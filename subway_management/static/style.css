@@ -1,0 +1,22 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1, h2 {
+    color: #343a40;
+}
+
+.container {
+    padding: 30px;
+}
+
+.btn {
+    min-width: 150px;
+}
+
+.table {
+    background-color: white;
+}
+.btn-view { background-color: #6f42c1; }
+.btn-view:hover { background-color: #5936a2; }
+

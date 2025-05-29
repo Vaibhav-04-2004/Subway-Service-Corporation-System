@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metros</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('/static/metros.jpg');  /* local image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+        .overlay {
+            background-color: rgba(0,0,0,0.4); /* Slightly dark overlay for readability */
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 50px;
+        }
+        h1 {
+            font-weight: bold;
+        }
+        .btn-custom {
+            background-color: #28a745;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Metro List</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Metro No</th>
+                <th>Metro ID</th>
+                <th>Class Type</th>
+                <th>Fees</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for metro in metros %}
+            <tr>
+                <td>{{ metro.metro_no }}</td>
+                <td>{{ metro.metro_id }}</td>
+                <td>{{ metro.class_type }}</td>
+                <td>{{ metro.fees }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-secondary">Back</a>
+</div>
+</body>
+</html>

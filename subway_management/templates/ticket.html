@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Ticket</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            padding: 30px;
+        }
+        .ticket-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .ticket-header {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .ticket-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .btn-custom {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="ticket-card mx-auto" style="max-width: 500px;">
+        <div class="ticket-header text-center">🎫 Your Ticket</div>
+        <div class="ticket-info">
+            <p><strong>Passenger Name:</strong> {{ ticket.passenger_name }}</p>
+            <p><strong>Schedule ID:</strong> {{ ticket.schedule_id }}</p>
+            <p><strong>Ticket No:</strong> {{ ticket.ticket_no }}</p>
+            <p><strong>Class Type:</strong> {{ ticket.class_type }}</p>
+            <p><strong>Seat No:</strong> {{ ticket.seat_no }}</p>
+            <p><strong>Booking Date:</strong> {{ ticket.date_time }}</p>
+        </div>
+
+        <!-- Optional QR Code Placeholder -->
+        <!-- <div class="text-center my-3">
+            <img src="{{ url_for('static', filename='qrcode_placeholder.png') }}" alt="QR Code" width="120">
+        </div> -->
+
+        <div class="text-center mt-4 d-flex justify-content-around">
+            <a href="/" class="btn btn-primary btn-custom">Back Home</a>
+            <button class="btn btn-success btn-custom" onclick="window.print()">Print Ticket</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

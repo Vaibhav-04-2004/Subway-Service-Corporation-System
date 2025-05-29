@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View My Ticket</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 50px;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2 class="text-center mb-4">View My Ticket</h2>
+    <form method="POST">
+        <div class="mb-3">
+            <input type="text" class="form-control" name="ticket_no" placeholder="Enter Ticket No" required>
+        </div>
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary">View Ticket</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
